@@ -1,0 +1,1 @@
+"Am currentlyedditing test3.txt from my terminal."
