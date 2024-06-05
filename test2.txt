@@ -1,0 +1,2 @@
+I will be making a change t tes5t2.txt. Learning git is a fun, though ittakes substancial measure of commitment and
+one could still make fun out of it just like am doing now.
