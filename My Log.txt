@@ -1,0 +1,75 @@
+user@DESKTOP-H4ITCNA MINGW64 ~
+$ cd projects/practice-repo
+
+user@DESKTOP-H4ITCNA MINGW64 ~/projects/practice-repo (testing)
+$ ls -la
+total 10
+drwxr-xr-x 1 user 197121  0 Jun  6 02:31 ./
+drwxr-xr-x 1 user 197121  0 Jun  5 00:55 ../
+drwxr-xr-x 1 user 197121  0 Jun  6 02:02 .git/
+-rw-r--r-- 1 user 197121 41 Jun  6 02:11 CITIES.txt
+-rw-r--r-- 1 user 197121 65 Jun  6 02:31 README.md
+-rw-r--r-- 1 user 197121  0 Jun  4 01:56 test.txt
+-rw-r--r-- 1 user 197121  0 Jun  4 02:38 test2.txt
+
+user@DESKTOP-H4ITCNA MINGW64 ~/projects/practice-repo (testing)
+$ vim README.md
+
+user@DESKTOP-H4ITCNA MINGW64 ~/projects/practice-repo (testing)
+$ git diff HEAD README.md
+diff --git a/README.md b/README.md
+index 247c1a0..8391723 100644
+--- a/README.md
++++ b/README.md
+@@ -1,2 +1,2 @@
+ # practice-repo
+-Practice account for learning Git
++Pracice account for learning Git
+
+user@DESKTOP-H4ITCNA MINGW64 ~/projects/practice-repo (testing)
+$ git log --pretty=oneline
+958fff618f58b17fbbafe13b88ed2f9cbf7d0af5 (HEAD -> testing, origin/main, origin/HEAD) Merge pull request #1 from segunolorn/feature/lesson
+dbe4f558bee3d5cdee8250cd081df676e0465f74 (origin/feature/lesson, feature/lesson) Add test2.txt
+cdda432fa5662b2182ada299a1371d874039ee0e Adding a new file for testing
+bdde9c3c20bf4399c05af1d6ea259f1d7083582a Initial commit
+
+user@DESKTOP-H4ITCNA MINGW64 ~/projects/practice-repo (testing)
+$ git diff dbe4f558bee3d5cdee8250cd081df676e0465f74 bdde9c3c20bf4399c05af1d6ea259f1d7083582a
+diff --git a/test.txt b/test.txt
+deleted file mode 100644
+index e69de29..0000000
+diff --git a/test2.txt b/test2.txt
+deleted file mode 100644
+index e69de29..0000000
+
+user@DESKTOP-H4ITCNA MINGW64 ~/projects/practice-repo (testing)
+$ git branch
+  feature/lesson
+  main
+* testing
+
+user@DESKTOP-H4ITCNA MINGW64 ~/projects/practice-repo (testing)
+$ diff main feature/lesson
+diff: main: No such file or directory
+diff: feature/lesson: No such file or directory
+
+user@DESKTOP-H4ITCNA MINGW64 ~/projects/practice-repo (testing)
+$ git diff main feature/lesson
+diff --git a/.README.md.swp b/.README.md.swp
+deleted file mode 100644
+index e065944..0000000
+Binary files a/.README.md.swp and /dev/null differ
+
+user@DESKTOP-H4ITCNA MINGW64 ~/projects/practice-repo (testing)
+$ git diff main testing
+diff --git a/.README.md.swp b/.README.md.swp
+deleted file mode 100644
+index e065944..0000000
+Binary files a/.README.md.swp and /dev/null differ
+
+user@DESKTOP-H4ITCNA MINGW64 ~/projects/practice-repo (testing)
+
+
+
+
+
